@@ -1,7 +1,7 @@
 spring:
   application.name: service-turbine
 server:
-  port: 8769
+  port: 9008
 security.basic.enabled: false
 turbine:
   aggregator:
