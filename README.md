@@ -7,8 +7,8 @@ spring-cloud-docker doker和SpringCloud的结合(docker和docker-compose)
 spring-cloud-feign  feign调用  
 spring-cloud-ribbon ribbon调用  
 spring-cloud-server 生产者   
-spring-cloud-turbine   断路器聚合监控
-spring-cloud-zipkin   服务链路追踪
+spring-cloud-turbine   断路器聚合监控   
+spring-cloud-zipkin   服务链路追踪   
 spring-cloud-zuul 路由网关(实现黑白名单、限流、验证号token)
 
 
