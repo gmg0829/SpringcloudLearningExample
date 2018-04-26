@@ -22,7 +22,7 @@ public class ConsumerService {
         return restTemplate.getForEntity("http://service-server/hello", String.class).getBody();
     }
     public String fallback() {
-        return "ribbon服务不通，请稍后重试！";
+        return "服务不通，请稍后重试！";
     }
 
 }

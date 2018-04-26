@@ -52,7 +52,11 @@
         <artifactId>spring-boot-devtools</artifactId>
         <optional>true</optional>
     </dependency>
-	
+      <!--链路追踪jar包-->
+      <dependency>
+          <groupId>org.springframework.cloud</groupId>
+          <artifactId>spring-cloud-starter-zipkin</artifactId>
+      </dependency>
   </dependencies>
   
   <!-- spring cloud依赖，指定spring cloud版本 -->
