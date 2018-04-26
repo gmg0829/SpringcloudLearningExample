@@ -1,0 +1,26 @@
+discovery:
+  image: discovery
+  hostname: discovery
+  ports:
+   - "8761:8761"
+server:
+  image: server
+  ports:
+   - "9000:9000"
+  links:
+   - discovery
+client:
+  image: client
+  ports:
+   - "9001:9001"
+  links:
+   - discovery
+zuul:
+  image: zuul
+  ports:
+   - "9002:9002"
+  links:
+   - discovery
+   - server
+   - client
+
