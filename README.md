@@ -1,4 +1,18 @@
-# docker常用命令：
+# 项目目录简介
+configRespo 配置仓库  
+spring-cloud--eureka1 注册中心1  
+pring-cloud--eureka2 注册中心2  
+spring-cloud-config  高可用的分布式配置中心   
+spring-cloud-docker doker和SpringCloud的结合(docker和docker-compose)   
+spring-cloud-feign  feign调用  
+spring-cloud-ribbon ribbon调用  
+spring-cloud-server 生产者   
+spring-cloud-turbine   断路器聚合监控
+spring-cloud-zipkin   服务链路追踪
+spring-cloud-zuul 路由网关(实现黑白名单、限流、验证号token)
+
+
+# docker常用命令
 ## 镜像命令
 搜索镜像：docker search java  
 下载镜像：docker pull java  
