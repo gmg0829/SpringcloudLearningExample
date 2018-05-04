@@ -39,6 +39,10 @@ public class AppClient
 		return new RestTemplate();
 	}
 
+	@Bean
+	public IRule ribbonRule(){
+		return new RandomRule();
+	}
 	//AbstractLoadBalancer
 	// BaseLoadBalancer  choseServer //挑选一个具体的微服务实例  addServer markServerDown
 	// getReachableServers//获取可用的微服务实例  getAllServers 获取所有的微服务实例

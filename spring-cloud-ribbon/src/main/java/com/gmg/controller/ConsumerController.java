@@ -2,6 +2,7 @@ package com.gmg.controller;
 
 import com.gmg.service.ConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,7 @@ public class ConsumerController {
 
     @Autowired
     ConsumerService consumerService;
+
 
     @GetMapping("/consumer")
     public String hello() {
