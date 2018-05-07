@@ -22,7 +22,7 @@ public class ConfigClientApplication {
 
 	@Value("${config}")
 	String config;
-	@RequestMapping(value = "/hi")
+	@RequestMapping(value = "/configClient1")
 	public String hi(){
 		return config;
 	}
