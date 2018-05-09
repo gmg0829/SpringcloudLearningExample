@@ -3,12 +3,15 @@ configRespo 配置仓库
 spring-cloud--eureka1 注册中心1  
 pring-cloud--eureka2 注册中心2  
 spring-cloud-config  高可用的分布式配置中心   
+spring-cloud-config-client 配置中心客户端1    
+spring-cloud-config-client2 配置中心客户端2 
 spring-cloud-docker doker和SpringCloud的结合(docker和docker-compose)   
 spring-cloud-feign  feign调用  
 spring-cloud-ribbon ribbon调用  
 spring-cloud-server 生产者   
 spring-cloud-turbine   断路器聚合监控   
 spring-cloud-zipkin   服务链路追踪   
+spring-cloud-zipkin-stream   服务链路追踪流      
 spring-cloud-zuul 路由网关(实现黑白名单、限流、验证号token)
 
 
