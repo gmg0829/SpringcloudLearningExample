@@ -8,7 +8,6 @@ import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
-import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -18,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 
 //@EnableCircuitBreaker	//开启断路器功能
 @EnableHystrix
-@EnableHystrixDashboard	//监控面板
+//@EnableHystrixDashboard	//监控面板
 @EnableDiscoveryClient //开启自动装配
 @SpringBootApplication //Spring Boot核心注解，用于开启自动配置
 public class AppClient 

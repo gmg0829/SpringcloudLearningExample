@@ -3,14 +3,17 @@ spring:
 server:
   port: 9008
 security.basic.enabled: false
+### 配置Eureka中的serviceId列表，表明监控哪些服务
 turbine:
   aggregator:
     clusterConfig: default
-  appConfig: service-ribbon,service-server   ### 配置Eureka中的serviceId列表，表明监控哪些服务
+  appConfig: service-ribbon,service-feign
   clusterNameExpression: new String("default")
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:9000/eureka/,http://localhost:9001/eureka/
-      
+
 # http://localhost:9008/turbine.stream
+
+# http://localhost:9008/hystrix

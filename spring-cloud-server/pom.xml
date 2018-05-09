@@ -53,9 +53,27 @@
         <optional>true</optional>
     </dependency>
       <!--链路追踪jar包-->
+      <!--<dependency>-->
+          <!--<groupId>org.springframework.cloud</groupId>-->
+          <!--<artifactId>spring-cloud-starter-zipkin</artifactId>-->
+      <!--</dependency>-->
+      <!--<dependency>
+          <groupId>org.springframework.cloud</groupId>
+          <artifactId>spring-cloud-starter-sleuth</artifactId>
+      </dependency>-->
       <dependency>
           <groupId>org.springframework.cloud</groupId>
-          <artifactId>spring-cloud-starter-zipkin</artifactId>
+          <artifactId>spring-cloud-sleuth-zipkin-stream</artifactId>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework.cloud</groupId>
+          <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+      </dependency>
+      <!--logstash-->
+      <dependency>
+          <groupId>net.logstash.logback</groupId>
+          <artifactId>logstash-logback-encoder</artifactId>
+          <version>5.1</version>
       </dependency>
   </dependencies>
   
