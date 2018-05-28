@@ -25,7 +25,7 @@ public class TokenFilter extends ZuulFilter {
 
 
 
-	//过滤的顺序
+	//过滤的顺序 越小优先级越高
 	@Override
 	public int filterOrder() {
 		return 0;
@@ -38,12 +38,13 @@ public class TokenFilter extends ZuulFilter {
 		return "pre";
 	}
 	
-	//当return返回true时过滤
+	//当return返回true时过滤 指定过滤器的有效范围
 	@Override
 	public boolean shouldFilter() {
 		return true;
 	}
-	
+
+	//过滤器的具体逻辑
 	@Override
 	public Object run() {
 		

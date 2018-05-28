@@ -7,6 +7,12 @@ server:
 spring:
   application:
     name: service-feign
+  rabbitmq:
+          username: guest
+          port: 5672
+          host: 127.0.0.1
+          password: guest
+
 feign:
     hystrix:
         enabled: true
@@ -21,4 +27,5 @@ feign:
 logging:
   level:
       com.gmg.service: debug
+
 

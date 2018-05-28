@@ -30,4 +30,9 @@ public class ConsumerService {
         return "服务不通，请稍后重试！";
     }
 
+
+    public String feign(){
+        return restTemplate.getForEntity("http://service-feign/consumer", String.class).getBody();
+    }
+
 }

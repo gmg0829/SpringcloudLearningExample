@@ -1,5 +1,7 @@
 package com.gmg;
 
+import com.netflix.hystrix.HystrixCircuitBreaker;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.loadbalancer.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -53,5 +55,5 @@ public class AppClient
      // RetryRule 重试机制的实例选择功能 默认使用了RoundRobinRule实例，选择到返回，若选择不到根据设置的阈值（maxRetryMillis[500]+当前时间戳），当超过当前阈值，则返回null。
 	// WeightedResponseTimeRule 更具权重挑选实例  权重=总的响应时间-实例的平均响应时间    平均时间越短 权重区间越大，被选到的概率越大
 	//生成一个[0,最大权重值]的随机数，如果当前实例的权重值大于随机数，拿当前实例的索引值去获取当前实例
-
+  //HystrixCircuitBreaker
 }

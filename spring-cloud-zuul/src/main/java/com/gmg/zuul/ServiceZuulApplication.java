@@ -2,6 +2,7 @@ package com.gmg.zuul;
 
 import com.gmg.zuul.filter.RateLimitZuulFilter;
 import com.gmg.zuul.filter.TokenFilter;
+import com.netflix.zuul.FilterProcessor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,6 +12,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
+import org.springframework.cloud.netflix.zuul.filters.discovery.PatternServiceRouteMapper;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -39,4 +42,8 @@ public class ServiceZuulApplication{
     public RateLimitZuulFilter rateLimitZuulFilter() {
         return new RateLimitZuulFilter();
     }
+
+    //PatternServiceRouteMapper
+   // FilterProcessor 过滤器的核心处理器
+
 }

@@ -28,7 +28,13 @@ public class ConsumerController {
     private final Logger logger=Logger.getLogger(getClass());
     @GetMapping("/consumer")
     public String hello() {
-        logger.info("service-ribbon");
+        logger.info("service-ribbon invoke service-server");
         return consumerService.consumer();
+    }
+
+    @GetMapping("/feign")
+    public String feign() {
+        logger.info("service-ribbon invoke service-feign");
+        return consumerService.feign();
     }
 }
