@@ -16,7 +16,7 @@
 *.iml
 *.ipr
 /target/
-.mvn
+/.mvn/
 mvnw
 mvnw.cmd
 
