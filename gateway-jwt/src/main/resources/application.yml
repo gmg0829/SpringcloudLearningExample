@@ -5,10 +5,21 @@ spring:
     name: gateway-server
   cloud:
      gateway:
-        discovery:
-             locator:
-               enabled: true
-               lowerCaseServiceId: true  # http://localhost:8080/service-client/v2   Сд
+       locator:
+            enabled: true
+       routes:
+       - id: sc-service
+         uri: lb://service-client
+         predicates:
+         - Path=/client/**
+         filters:
+         - GwSwaggerHeaderFilter
+         - StripPrefix=1
+#        discovery:
+#             locator:
+#               enabled: true
+#               lowerCaseServiceId: true # http://localhost:8080/service-client/v2   Сд
+
 #       routes:
 #       - id: service1_v1
 #         uri: http://localhost:8762/v1
