@@ -4,6 +4,8 @@ spring:
   jackson:
     serialization:
       FAIL_ON_EMPTY_BEANS: false
+  application:
+    name: eureka-sever
 eureka:
   server:
     use-read-only-response-cache: false
