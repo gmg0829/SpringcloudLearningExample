@@ -1,1 +1,1 @@
-SpringCloud  Finchley
+SpringCloud Finchley.RELEASE
