@@ -5,17 +5,21 @@ spring:
     name: gateway-server
   cloud:
      gateway:
-       routes:
-       - id: service1_v1
-         uri: http://localhost:8762/v1
-         predicates:
-         - Path=/test
-         - Weight=service1, 60
-       - id: service1_v2
-         uri: http://localhost:8762/v2
-         predicates:
-         - Path=/test
-         - Weight=service1, 40
+        discovery:
+             locator:
+               enabled: true
+               lowerCaseServiceId: true  # http://localhost:8080/service-client/v2   –°–¥
+#       routes:
+#       - id: service1_v1
+#         uri: http://localhost:8762/v1
+#         predicates:
+#         - Path=/test
+#         - Weight=service1, 60 #»®÷ÿ
+#       - id: service1_v2
+#         uri: http://localhost:8762/v2
+#         predicates:
+#         - Path=/test
+#         - Weight=service1, 40
 eureka:
   client:
     service-url:
