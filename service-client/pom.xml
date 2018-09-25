@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.gmg</groupId>
-	<artifactId>eureka-client</artifactId>
+	<artifactId>service-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>eureka-client</name>
+	<name>service-client</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>

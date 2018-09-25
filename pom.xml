@@ -10,7 +10,8 @@
 
     <modules>
         <module>eureka-server</module>
-        <module>eureka-client</module>
+        <module>service-client</module>
+        <module>gateway-jwt</module>
     </modules>
 
     <parent>
