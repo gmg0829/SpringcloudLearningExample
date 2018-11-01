@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 9002
 
 eureka:
   client:
@@ -8,6 +8,9 @@ eureka:
   instance:
     preferIpAddress: true
 
-ribbon:
-  eureka:
-    enabled: true
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: client
+
