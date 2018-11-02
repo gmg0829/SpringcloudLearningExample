@@ -1,10 +1,18 @@
 version: "3"
 services:
-  discovery:
+  peer1:
     image: microservice/discovery
-    hostname: discovery
     ports:
     - "8761:8761"
+    environment:
+    - spring.profiles.active=peer1
+  peer2:
+    image: microservice/discovery
+    hostname: peer2
+    ports:
+    - "8762:8762"
+    environment:
+    - spring.profiles.active=peer2
   server:
     image: microservice/server
     ports:
@@ -17,4 +25,3 @@ services:
     image: microservice/zuul
     ports:
     - "9002:9002"
-
